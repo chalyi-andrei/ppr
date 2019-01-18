@@ -1,14 +1,19 @@
 ## Node.js project for developers performance review and checking skills
 # Table of Contents
-1. [About](#About)
-  - [Using](###Using)
-2. [Getting-Started](#Getting-Started)
+* [About](#About)
+  * [Description](#Description)
+  * [Using](#Using)
+* [Getting-Started](#Getting-Started)
 
 
 ## About
+
+### Description
+
 This is a project that is intended for developer performance review and checking skills.
 Here you can create a developer, reviewer, ppr and a skill grade matrix. You can fill out the check list, as well as carry out all the CRUD methods.
 Prr project looks like this:
+
 ![Developers image](./public/assets/img/app.gif)
 
   ### Using
