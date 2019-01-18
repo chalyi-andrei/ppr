@@ -1,4 +1,4 @@
-## Simple app about my professional skills
+## Node.js project for developers performance review and checking skills
 ![Developers image](./public/assets/img/app.gif)
 
 ### Using 
