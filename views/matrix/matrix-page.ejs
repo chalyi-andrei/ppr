@@ -1,0 +1,30 @@
+<% include ./../partials/header.ejs %>
+<div class="content">
+  <p class="text-right addDeveloper"><a href="/matrix/add" class="btn btn-sm btn-info">add ppr</a></p>
+  <div class="cardwrap">
+    <% if (matrix.length > 0) {%>
+    <% matrix.forEach((m, index) => { %>
+
+    <div class="card pprCard" style="width: 18rem;">
+      <a href="#" class="card-link">
+        <img src="assets/img/matrix.png" class="card-img-top">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">
+          Scill grade matrix
+        </h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><a href="#" class="card-link">
+            <%= m.Position %></a></li>
+
+      </ul>
+    </div>
+    <% }); %>
+    <% }  else { %>
+
+    <% } %>
+  </div>
+
+
+</div>

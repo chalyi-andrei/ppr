@@ -1,0 +1,50 @@
+<% include  ./../partials/header.ejs %>
+<div class="content">
+  <div class="table-wrapper">
+    <% if (reviewers.length > 0) {%>
+    <table class="table table-hovered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Image</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Position</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% reviewers.forEach((reviewer, index) => { %>
+        <tr>
+          <th scope="row">
+            <%= reviewer.id %>
+          </th>
+          <td><img src="/assets/img/<%= reviewer.image %>" class="rounded-circle player-img" alt=""></td>
+          <td>
+            <%= reviewer.name %>
+          </td>
+          <td>
+            <%= reviewer.surname %>
+          </td>
+          <td>
+            <%= reviewer.position %>
+          </td>
+          <td>
+            <a href="/reviewer/edit/<%= reviewer.id %>" rel="noopener" class="btn btn-sm btn-success">Edit</a>
+            <a href="/reviewer/delete/<%= reviewer.id %>" class="btn btn-sm btn-danger">Delete</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } else { %>
+    <p class="text-center">No reviewers found. Go <a href="/reviewer/add">here</a> to add reviewers.</p>
+    <% } %>
+    <p class="text-right addDeveloper"><a href="/reviewer/add" class="btn btn-sm btn-info">add reviewer</a></p>
+
+  </div>
+</div>
+</div>
+</body>
+
+</html>

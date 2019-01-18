@@ -1,0 +1,50 @@
+<% include partials/header.ejs %>
+<div class="content">
+  <div class="table-wrapper">
+    <% if (developers.length > 0) {%>
+    <table class="table table-hovered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Image</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Position</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% developers.forEach((developer, index) => { %>
+        <tr>
+          <th scope="row">
+            <%= developer.id %>
+          </th>
+          <td><img src="/assets/img/<%= developer.image %>" class="rounded-circle player-img" alt=""></td>
+          <td>
+            <%= developer.name %>
+          </td>
+          <td>
+            <%= developer.surname %>
+          </td>
+          <td>
+            <%= developer.position %>
+          </td>
+          <td>
+            <a href="/edit/<%= developer.id %>" rel="noopener" class="btn btn-sm btn-success">Edit</a>
+            <a href="/delete/<%= developer.id %>" class="btn btn-sm btn-danger">Delete</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } else { %>
+    <p class="text-center">No developers found. Go <a href="/add">here</a> to add developers.</p>
+    <% } %>
+    <p class="text-right addDeveloper"><a href="/add" class="btn btn-sm btn-info">add developer</a></p>
+
+  </div>
+</div>
+</div>
+</body>
+
+</html>

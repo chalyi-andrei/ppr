@@ -1,0 +1,59 @@
+<% include ./../partials/header.ejs %>
+<div class="container">
+  <div class="form_wrap">
+    <% if (message != '') { %>
+    <p class="text-center text-danger">
+      <%= message %>
+    </p>
+    <% } %>
+    <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+      <div class="form-group col-md-12">
+        <h5>Scill grade matrix</h5>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="first-name">Position</label>
+        </div>
+        <div class="form-group col-md-6">
+          <select name="position" class="form-control" required>
+            <option>Junior Software Developer</option>
+            <option>Software Developer</option>
+            <option>Senior Software Developer</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="first-name">Object oriented design</label>
+        </div>
+        <div class="form-group col-md-6">
+          <textarea type="text" class="form-control" name="ood" id="surname" placeholder="Ivanov" required> </textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="documentation">Documentation</label>
+        </div>
+        <div class="form-group col-md-6">
+          <textarea type="text" class="form-control" name="documentation" id="surname" placeholder="Ivanov" required> </textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="documentation">Unit testing</label>
+        </div>
+        <div class="form-group col-md-6">
+          <textarea type="text" class="form-control" name="unit_testing" id="surname" placeholder="Ivanov" required> </textarea>
+        </div>
+      </div>
+
+
+      <button type="submit" class="btn btn-info float-right">Add Grade matrix</button>
+    </form>
+  </div>
+
+</div>
+</div>
+</body>
+
+</html>

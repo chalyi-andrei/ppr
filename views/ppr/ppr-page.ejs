@@ -1,0 +1,40 @@
+<% include ./../partials/header.ejs %>
+<div class="content">
+  <p class="text-right addDeveloper"><a href="/ppr/add" class="btn btn-sm btn-info">add ppr</a></p>
+  <div class="cardwrap">
+    <% if (pprs.length > 0) {%>
+    <% pprs.forEach((ppr, index) => { %>
+
+    <div class="card pprCard" style="width: 18rem;">
+      <a href="#" class="card-link">
+        <img src="assets/img/ppr.png" class="card-img-top">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">
+          Ppr № <a href="#" class="card-link">
+            <%= "00" + ppr.id %>
+          </a>
+        </h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Position:
+          <%= ppr.Position%>
+        </li>
+        <li class="list-group-item">Developer:
+          <%= ppr.dev_name %>
+          <%= ppr.dev_surname %>
+        </li>
+        <li class="list-group-item">Reviewer:
+          <%= ppr.rew_name %>
+          <%= ppr.rew_surname %>
+        </li>
+      </ul>
+    </div>
+    <% }); %>
+    <% }  else { %>
+
+    <% } %>
+  </div>
+
+
+</div>
