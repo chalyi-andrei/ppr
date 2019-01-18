@@ -1,8 +1,8 @@
 ## Node.js project for developers performance review and checking skills
 # Table of Contents
 1. [About](#About)
-2. [About](#Getting Started)
-3. [About](#Using)
+2. [Getting-Started](#Getting-Started)
+3. [Using](#Using)
 
 ## About
 ![Developers image](./public/assets/img/app.gif)
